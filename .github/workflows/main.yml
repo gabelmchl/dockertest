@@ -14,9 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: ls
-    - run: pwd
     - name: Build python docker container
+      working-directory: ./python
       run: docker build -t michael/python .
     # - name: Build the Docker images
     #   run: docker compose up -d --build
