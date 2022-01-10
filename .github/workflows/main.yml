@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - 
-        #uses: actions/checkout@v2
-        name: Build the Docker image
+      - uses: actions/checkout@v2
         with:
-            context: ./python
-            file: ./Dockerfile
-        run: docker build . --tag test-image:$(date +%s)
+          context: ./python
+          file: ./Dockerfile
+      - name: Build the Docker image
+
+
