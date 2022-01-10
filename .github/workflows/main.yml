@@ -14,8 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build the Docker image
+      - run: docker build . --tag test-image:$(date +%s)
         with:
             context: ./python
             file: ./Dockerfile
-        run: docker build . --tag test-image:$(date +%s)
+        
