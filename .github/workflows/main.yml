@@ -13,9 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      uses: actions/checkout@v2
-      name: Build the Docker image
-      with:
-          context: .
-          file: ./Dockerfile
-      run: docker build . --file Dockerfile --tag test-image:$(date +%s)
+      - 
+        uses: actions/checkout@v2
+        name: Build the Docker image
+        with:
+            context: .
+            file: ./Dockerfile
+        run: docker build . --file Dockerfile --tag test-image:$(date +%s)
