@@ -1,0 +1,24 @@
+<script>
+    function double_number() {
+
+        let number = document.getElementById("number").value;
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("output").innerHTML = 2 * parseInt(number);
+            }
+        };
+        xhttp.open("GET", "http://localhost:5000/query-example?number=" + number, true);
+        xhttp.send();
+        }
+</script>
+
+<h1>Hello Michael</h1>
+
+<label for="number">Number</label>
+<input type="text" id="number" name="number"><br><br>
+
+<button onclick="double_number()">Double</button>
+
+<p id="output"></p>
