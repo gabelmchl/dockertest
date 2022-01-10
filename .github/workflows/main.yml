@@ -19,4 +19,4 @@ jobs:
         with:
             context: .
             file: ./Dockerfile
-        run: docker build . --file Dockerfile --tag test-image:$(date +%s)
+        #run: docker build . --file Dockerfile --tag test-image:$(date +%s)
