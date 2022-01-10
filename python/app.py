@@ -1,4 +1,4 @@
-# import main Flask class, request object
+# import main Flask class and request object
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
