@@ -14,7 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker images
-      run: docker compose up -d --build
-    - name: Stop the Docker images
-      run: docker compose down
+    - run: cd python
+    - name: Build python docker container
+      run: docker build -t michael/python .
+    # - name: Build the Docker images
+    #   run: docker compose up -d --build
+    # - name: Stop the Docker images
+    #   run: docker compose down
